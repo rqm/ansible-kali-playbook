@@ -1,0 +1,7 @@
+---
+- name: Configuration for a fresh kali image
+  hosts: localhost
+  connection: local
+
+  roles:
+    - common
