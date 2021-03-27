@@ -1,6 +1,7 @@
 ---
 - name: Customize greeter
   copy: src=lightdm-gtk-greeter.conf dest=/etc/lightdm/
+  become: yes
 
 - name: Customize desktop
   copy: src=xfce4-desktop.xml dest=~/.config/xfce4/xfconf/xfce-perchannel-xml/
