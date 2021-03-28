@@ -1,13 +1,16 @@
 ---
-- name: Set greeter config
+- name: Set greeter background
   ansible.builtin.lineinfile:
     path: '{{ greeter_config_path }}'
     regexp: '{{ greeter_bg_regexp }}'
-    line: '{{ greeter_bg_regexp }} {{ greeter_bg_line }}'
+    line: '{{ greeter_bg_line }}'
+  become: yes
+
+- name: Hide greeter user image
   ansible.builtin.lineinfile:
     path: '{{ greeter_config_path }}'
     line: '{{ greeter_hide_user_image_line }}'
-    insertbefore: BOF
+    insertbefore: EOF
   become: yes
 
 - name: Set keyboard shortcuts

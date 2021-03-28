@@ -1,13 +1,13 @@
 ---
 # greeter config
 greeter_config_path: /etc/lightdm/lightdm-gtk-greeter.conf
-greeter_bg_regexp: 'background ='
-greeter_bg_line: '#161616'
+greeter_bg_regexp: '^background(.*)$'
+greeter_bg_line: 'background = #161616'
 greeter_hide_user_image_line: 'hide-user-image = true'
 
 # keyboard shortcuts
 keyboard_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-keyboard_close_key_regexp: '^<property(.*)close_window_key(.*)'
+keyboard_close_key_regexp: '^(.*)close_window_key(.*)'
 keyboard_close_key_line: '<property name="&lt;Primary&gt;q" type="string" value="close_window_key"/>'
 
 # desktop config
