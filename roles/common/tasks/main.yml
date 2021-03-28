@@ -1,10 +1,23 @@
 ---
-- name: Customize greeter
-  copy: src=lightdm-gtk-greeter.conf dest=/etc/lightdm/
+- name: Set greeter config
+  ansible.builtin.lineinfile:
+    path: {{ greeter_config_path }}
+    regexp: {{ greeter_bg_regexp }}
+    line: {{ greeter_bg_regexp }} {{ greeter_bg_line }}
+  ansible.builtin.lineinfile:
+    path: {{ greeter_path }}
+    line: {{ greeter_hide_user_image_line }}
+    insertbefore: BOF
   become: yes
 
-- name: Customize desktop
-  copy: src=xfce4-desktop.xml dest=~/.config/xfce4/xfconf/xfce-perchannel-xml/
+- name: Set keyboard shortcuts
+  ansible.builtin.lineinfile:
+    path: {{ keyboard_config_path }}
+    regexp: {{ keyboard_close_key_regexp }}
+    line: {{ keyboard_close_key_line }}
+
+- name: Set desktop config
+  copy: src={{ desktop_config_file }} dest={{ desktop_config_path }}
 
 - name: Refresh desktop
   shell: |
