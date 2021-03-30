@@ -7,6 +7,7 @@ greeter_hide_user_image_line: 'hide-user-image = true'
 
 # xfce config
 xfce_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+xfce_panel_config_path: ~/.config/xfce4/panel/
 keyboard_config_file: xfce4-keyboard-shortcuts.xml
 launcher_config_file: xfce4-panel.xml
 desktop_config_file: xfce4-desktop.xml
