@@ -4,5 +4,6 @@
   connection: local
 
   roles:
-    - common
+    - desktop
     - terminal
+    - apps

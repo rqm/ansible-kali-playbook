@@ -1,0 +1,10 @@
+---
+- name: Install Tor Browser
+  ansible.builtin.package:
+    name: torbrowser-launcher
+    state: present
+  become: yes
+
+- name: Unarchive rockyou wordlist
+  shell: gzip -d {{ rockyou_path }}
+  become: yes
