@@ -19,6 +19,14 @@
     regexp: '{{ keyboard_close_key_regexp }}'
     line: '{{ keyboard_close_key_line }}'
 
+- name: Set launcher config
+  ansible.builtin.template:
+    src: '{{ launcher_config_file }}'
+    dest: '{{ launcher_config_path }}'
+    owner: "{{ lookup('env','USER') }}"
+    group: "{{ lookup('env','USER') }}"
+    mode: 0644
+
 # @TODO add launcher shortcuts
 
 - name: Set desktop config

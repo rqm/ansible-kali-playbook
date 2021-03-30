@@ -10,6 +10,10 @@ keyboard_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-
 keyboard_close_key_regexp: '^(.*)close_window_key(.*)'
 keyboard_close_key_line: '<property name="&lt;Primary&gt;q" type="string" value="close_window_key"/>'
 
+# launcher config
+launcher_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+launcher_config_file: xfce4-panel.xml
+
 # desktop config
 desktop_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/
 desktop_config_file: xfce4-desktop.xml

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Tor Browser
+GenericName=Tor browser
+Comment=Launch Tor Browser
+Exec=torbrowser-launcher %u
+Terminal=false
+Type=Application
+Icon=/home/{{ lookup('env','USER') }}/.config/xfce4/panel/launcher-22/tor.svg
+Categories=Network;WebBrowser;
+StartupWMClass=Tor Browser
+X-XFCE-Source=file:///usr/share/applications/torbrowser.desktop
+Path=
+StartupNotify=false
