@@ -5,15 +5,12 @@ greeter_bg_regexp: '^background(.*)$'
 greeter_bg_line: 'background = #161616'
 greeter_hide_user_image_line: 'hide-user-image = true'
 
+# xfce config
+xfce_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+keyboard_config_file: xfce4-keyboard-shortcuts.xml
+launcher_config_file: xfce4-panel.xml
+desktop_config_file: xfce4-desktop.xml
+
 # keyboard shortcuts
-keyboard_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 keyboard_close_key_regexp: '^(.*)close_window_key(.*)'
 keyboard_close_key_line: '<property name="&lt;Primary&gt;q" type="string" value="close_window_key"/>'
-
-# launcher config
-launcher_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/
-launcher_config_file: xfce4-panel.xml
-
-# desktop config
-desktop_config_path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/
-desktop_config_file: xfce4-desktop.xml
