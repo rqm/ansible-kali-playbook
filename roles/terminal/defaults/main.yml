@@ -3,3 +3,5 @@
 terminal_keyboard_config_path: ~/.config/qterminal.org/qterminal.ini
 terminal_keyboard_next_tab_key_regexp: '^Next%20Tab='
 terminal_keyboard_next_tab_key_line: 'Next%20Tab=Ctrl+Shift+]'
+terminal_keyboard_previous_tab_key_regexp: '^Previous%20Tab='
+terminal_keyboard_previous_tab_key_line: 'Previous%20Tab=Ctrl+Shift+['

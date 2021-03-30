@@ -2,5 +2,8 @@
 - name: Set terminal keyboard shortcuts
   ansible.builtin.lineinfile:
     path: '{{ terminal_keyboard_config_path }}'
-    regexp: '{{ terminal_keyboard_next_tab_key_regexp }}'
-    line: '{{ terminal_keyboard_next_tab_key_line }}'
+    regexp: '{{ item.regexp }}'
+    line: '{{ item.line }}'
+  loop:
+    - { regexp: '{{ terminal_keyboard_next_tab_key_regexp }}', line: '{{ terminal_keyboard_next_tab_key_line }}' }
+    - { regexp: '{{ terminal_keyboard_previous_tab_key_regexp }}', line: '{{ terminal_keyboard_previous_tab_key_line }}' }

@@ -19,6 +19,8 @@
     regexp: '{{ keyboard_close_key_regexp }}'
     line: '{{ keyboard_close_key_line }}'
 
+# @TODO add launcher shortcuts
+
 - name: Set desktop config
   copy: src={{ desktop_config_file }} dest={{ desktop_config_path }}
 
