@@ -1,0 +1,9 @@
+# basvandenbrink.firefox config
+firefox_profiles:
+      default-esr:
+        extensions:
+          - foxyproxy-standard
+        preferences:
+          network.cookie.lifetimePolicy: 2
+          privacy.donottrackheader.enabled: true
+          browser.privatebrowsing.autostart: true

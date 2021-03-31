@@ -41,6 +41,9 @@
   with_filetree: '../templates/launcher'
   when: item.state == 'file'
 
+- name: Refresh panel
+  command: xfce4-panel -r
+
 - name: Set desktop config
   copy: src={{ desktop_config_file }} dest={{ xfce_config_path }}
 
@@ -49,4 +52,3 @@
     killall xfconfd
     /usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd &
     killall xfdesktop
-    xfce4-panel -r

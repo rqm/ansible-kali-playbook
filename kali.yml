@@ -2,8 +2,11 @@
 - name: Configuration for a fresh kali image
   hosts: localhost
   connection: local
+  vars_files:
+    - ./defaults/firefox.yml
 
   roles:
     - desktop
     - terminal
     - apps
+    - basvandenbrink.firefox

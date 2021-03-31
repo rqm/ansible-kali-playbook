@@ -6,6 +6,6 @@
   become: yes
 
 - name: Unarchive rockyou wordlist
-  shell: gzip -d {{ rockyou_path }}
+  command: gzip -d {{ rockyou_path }}
   become: yes
   ignore_errors: yes
