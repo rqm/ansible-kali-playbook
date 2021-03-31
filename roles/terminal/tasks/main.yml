@@ -1,4 +1,10 @@
 ---
+- name: Run terminal to init config
+  shell: |
+    qterminal &
+    sleep 1
+    killall qterminal
+
 - name: Set terminal keyboard shortcuts
   ansible.builtin.lineinfile:
     path: '{{ terminal_keyboard_config_path }}'

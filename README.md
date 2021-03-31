@@ -6,4 +6,5 @@ A playbook to configure a fresh install of Kali linux
 
 Run in `mate-terminal`, allowing `qterminal` settings to persist
 
+> sudo apt install -y ansible
 > ansible-playbook kali.yml -K

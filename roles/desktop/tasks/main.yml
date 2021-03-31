@@ -49,3 +49,4 @@
     killall xfconfd
     /usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd &
     killall xfdesktop
+    xfce4-panel -r
