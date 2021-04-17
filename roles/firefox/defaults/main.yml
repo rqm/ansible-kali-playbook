@@ -1,0 +1,14 @@
+firefox_profiles:
+      default-esr:
+        preferences:
+          browser.privatebrowsing.autostart: true
+          browser.newtabpage.enabled: false
+          browser.startup.homepage: 'about:blank'
+          extensions.ui.extension.hidden: false
+          permissions.default.camera: 2
+          permissions.default.desktop-notification: 2
+          permissions.default.geo: 2
+          permissions.default.microphone: 2
+          permissions.default.xr: 2
+          privacy.donottrackheader.enabled: true
+          signon.rememberSignons: false

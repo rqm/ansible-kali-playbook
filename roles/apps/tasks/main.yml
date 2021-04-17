@@ -1,9 +1,13 @@
 ---
-- name: Install Tor Browser
-  ansible.builtin.package:
-    name: torbrowser-launcher
-    state: present
-  become: yes
+- name: Setup proxychains
+  ansible.builtin.lineinfile:
+    path: '{{ proxychains_config_path }}'
+    regexp: '{{ item.regexp }}'
+    line: '{{ item.line }}'
+  loop:
+    - { regexp: '{{ strict_chain_regexp }}', line: '{{ strict_chain_line }}' }
+    - { regexp: '{{ dynamic_chain_regexp }}', line: '{{ dynamic_chain_line }}' }
+    - { regexp: '{{ socks_regexp }}', line: '{{ socks_line }}' }
 
 - name: Unarchive rockyou wordlist
   command: gzip -d {{ rockyou_path }}

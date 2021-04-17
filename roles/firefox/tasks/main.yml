@@ -1,0 +1,4 @@
+---
+- name: Set Firefox config
+  include_role:
+      name: basvandenbrink.firefox
