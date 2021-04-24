@@ -13,3 +13,8 @@
   command: gzip -d {{ rockyou_path }}
   become: yes
   ignore_errors: yes
+
+- name: Install haiti
+  community.general.gem:
+    name: haiti-hash
+    state: latest
