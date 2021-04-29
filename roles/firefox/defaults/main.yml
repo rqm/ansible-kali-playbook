@@ -1,5 +1,6 @@
 firefox_profiles:
       default-esr:
+        extensions: []
         preferences:
           browser.privatebrowsing.autostart: true
           browser.newtabpage.enabled: false

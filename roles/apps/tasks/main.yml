@@ -8,13 +8,15 @@
     - { regexp: '{{ strict_chain_regexp }}', line: '{{ strict_chain_line }}' }
     - { regexp: '{{ dynamic_chain_regexp }}', line: '{{ dynamic_chain_line }}' }
     - { regexp: '{{ socks_regexp }}', line: '{{ socks_line }}' }
+  become: yes
 
 - name: Unarchive rockyou wordlist
   command: gzip -d {{ rockyou_path }}
   become: yes
   ignore_errors: yes
 
-- name: Install haiti
-  community.general.gem:
-    name: haiti-hash
-    state: latest
+- name: Install gems
+  command: gem install '{{ item.gem }}'
+  loop:
+    - { gem: 'haiti-hash' }
+  become: yes

@@ -2,7 +2,3 @@
 roles:
   # Install firefox role
   - name: basvandenbrink.firefox
-
-collections:
-  # Install general collection (Ruby gems support)
-  - name: community.general

@@ -1,6 +1,6 @@
 ---
 # proxychains config
-proxychains_config_path: /etc/proxychains4.conf
+proxychains_config_path: /etc/proxychains.conf
 strict_chain_regexp: '^strict_chain'
 strict_chain_line: '#strict_chain'
 dynamic_chain_regexp: '^#dynamic_chain'
