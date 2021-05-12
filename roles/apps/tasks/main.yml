@@ -20,3 +20,7 @@
   loop:
     - { gem: 'haiti-hash' }
   become: yes
+
+- name: Init msf db
+  command: msfdb init
+  become: yes
