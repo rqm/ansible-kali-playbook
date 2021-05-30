@@ -15,3 +15,5 @@ ansible-playbook kali.yml -K
 ### Post run
 
 - Firefox sync
+- Tmux plugins install
+- Vim plugins install

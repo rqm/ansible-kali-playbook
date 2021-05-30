@@ -1,0 +1,24 @@
+# editor
+export EDITOR=vim
+
+# mouse scrolling with less
+export LESS=-R
+
+# aliases
+alias tns="tmux new -s"
+alias tls="tmux ls"
+alias tas="tmux attach -t"
+alias tks="tmux kill-session -t"
+alias gaa="git add --all"
+alias gss="git status -s"
+alias gcmsg="git commit -m"
+alias gd="git diff"
+alias gl="git pull"
+alias gp="git push"
+alias grhh="git reset HEAD --hard"
+alias grv="git remote -v"
+alias gcm="git checkout master"
+alias gcd="git checkout develop"
+alias gip="curl -s icanhazip.com"
+alias py="python3"
+alias www="cd ~/www"

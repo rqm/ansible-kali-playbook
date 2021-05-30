@@ -1,0 +1,15 @@
+---
+- name: Create hushlogin
+  ansible.builtin.file:
+    path: ~/.hushlogin
+    state: touch
+
+- name: Update ZSH config
+  blockinfile:
+    block: "{{ lookup('file', '{{ playbook_dir }}/roles/dotfiles/files/zshrc') }}"
+    path: ~/.zshrc
+    insertbefore: EOF
+    backup: yes
+
+# @TODO mkdir ~/.tmux, clone tpm, paste .tmux.conf
+# @TODO create ~/.vimrc, add general, theme & mappings
